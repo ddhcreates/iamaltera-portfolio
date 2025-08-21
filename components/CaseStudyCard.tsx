@@ -1,12 +1,13 @@
 "use client";
-
 import { motion } from "framer-motion";
-import { ArrowUpRight, Clock, TrendingUp, Shield } from "lucide-react";
+import Link from "next/link";
+import { Clock, TrendingUp, Shield } from "lucide-react";
 
 interface CaseStudyCardProps {
   title: string;
   client: string;
   description: string;
+  slug: string; // Add this line
   metrics: {
     label: string;
     value: string;
@@ -25,6 +26,7 @@ export default function CaseStudyCard({
   title,
   client,
   description,
+  slug, // Add this line
   metrics,
   technologies,
 }: CaseStudyCardProps) {
@@ -39,7 +41,7 @@ export default function CaseStudyCard({
         </div>
         <h3 className="text-2xl font-bold mb-4">{title}</h3>
         <p className="text-neutral-600 mb-6">{description}</p>
-
+        
         <div className="grid grid-cols-3 gap-4 mb-6">
           {metrics.map((metric, index) => {
             const Icon = iconMap[metric.icon];
@@ -54,7 +56,7 @@ export default function CaseStudyCard({
             );
           })}
         </div>
-
+        
         <div className="flex flex-wrap gap-2 mb-6">
           {technologies.map((tech, index) => (
             <span
@@ -65,11 +67,16 @@ export default function CaseStudyCard({
             </span>
           ))}
         </div>
-
-        <button className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium">
+        
+        <Link
+          href={`/case-studies/${slug}`}
+          className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors"
+        >
           Read Full Case Study
-          <ArrowUpRight className="ml-1 h-4 w-4" />
-        </button>
+          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
     </motion.div>
   );

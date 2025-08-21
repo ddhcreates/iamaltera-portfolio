@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 const caseStudies = [
   {
     title: "Unified Student Database Automation",
-    client: "K-12 Educational Institution",
+    client: "K-12 Educational Institutions",
+    slug: "student-database-automation",
     description:
       "Transformed manual student data collection from a week-long process involving 1,000+ staff hours into an automated, error-free system using dynamic web forms and batch email automation.",
     metrics: [
@@ -29,7 +30,8 @@ const caseStudies = [
   },
   {
     title: "Tech Support Ticket Automation",
-    client: "Three K-12 Schools (340 Staff)",
+    client: "K-12 Schools",
+    slug: "tech-support-automation",
     description:
       "Replaced expensive Freshdesk licenses and inefficient Google Forms with a custom Telegram bot system that doubled ticket capture while eliminating ₹42,000 in annual costs.",
     metrics: [
