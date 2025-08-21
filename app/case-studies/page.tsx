@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    title: "Unified Database Automation System",
-    client: "Educational Institution",
+    title: "Unified Student Database Automation",
+    client: "K-12 Educational Institution",
     description:
-      "Transformed manual data management across multiple departments into an automated, error-free system that revolutionized operations.",
+      "Transformed manual student data collection from a week-long process involving 1,000+ staff hours into an automated, error-free system using dynamic web forms and batch email automation.",
     metrics: [
       { label: "Hours Saved", value: "1,070+", icon: "clock" as const },
       { label: "Error Reduction", value: "99%", icon: "shield" as const },
@@ -21,38 +21,28 @@ const caseStudies = [
     ],
     technologies: [
       "Google Apps Script",
-      "Google Sheets",
       "Gmail API",
-      "Custom Functions",
+      "HTML Service",
+      "Google Sheets",
+      "Token Authentication",
     ],
   },
   {
-    title: "Real-time Analytics Dashboard",
-    client: "Marketing Agency",
+    title: "Tech Support Ticket Automation",
+    client: "Three K-12 Schools (340 Staff)",
     description:
-      "Built a comprehensive dashboard that consolidated data from multiple sources, providing real-time insights and automated reporting.",
+      "Replaced expensive Freshdesk licenses and inefficient Google Forms with a custom Telegram bot system that doubled ticket capture while eliminating ₹42,000 in annual costs.",
     metrics: [
-      { label: "Data Sources", value: "12", icon: "trending" as const },
-      { label: "Update Speed", value: "< 1s", icon: "clock" as const },
-      { label: "Reports/Month", value: "200+", icon: "shield" as const },
-    ],
-    technologies: ["React", "Next.js", "Chart.js", "REST APIs", "PostgreSQL"],
-  },
-  {
-    title: "Customer Service Bot Integration",
-    client: "E-commerce Platform",
-    description:
-      "Developed an intelligent Telegram bot that automated customer inquiries, order tracking, and support ticket management.",
-    metrics: [
-      { label: "Response Time", value: "< 5s", icon: "clock" as const },
-      { label: "Queries/Day", value: "500+", icon: "trending" as const },
-      { label: "Satisfaction", value: "94%", icon: "shield" as const },
+      { label: "Cost Savings", value: "₹42,000/yr", icon: "trending" as const },
+      { label: "Submission Speed", value: "95% faster", icon: "clock" as const },
+      { label: "Ticket Increase", value: "150%", icon: "shield" as const },
     ],
     technologies: [
       "Telegram Bot API",
-      "Node.js",
-      "MongoDB",
-      "Natural Language Processing",
+      "Google Apps Script",
+      "Webhooks",
+      "Google Sheets",
+      "Automated Workflows",
     ],
   },
 ];
@@ -68,8 +58,8 @@ export default function CaseStudies() {
             </h1>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
               Real results from real projects. See how automation and creative
-              solutions have transformed businesses and saved thousands of
-              hours.
+              solutions have transformed educational institutions and saved thousands of
+              hours while eliminating costly licensing fees.
             </p>
           </div>
 
@@ -89,66 +79,147 @@ export default function CaseStudies() {
             </h2>
             <p className="text-xl text-neutral-600">
               Every project delivers measurable results that transform how
-              businesses operate.
+              educational institutions operate.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold mb-6">
-              Featured: Unified Database System
-            </h3>
+          <div className="space-y-8">
+            {/* Featured Case Study 1 */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold mb-6">
+                Featured: Unified Student Database System
+              </h3>
 
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-lg mb-2">The Challenge</h4>
-                <p className="text-neutral-600">
-                  Multiple departments manually managing data across
-                  disconnected spreadsheets, leading to errors, duplications,
-                  and countless hours of repetitive work.
-                </p>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">The Challenge</h4>
+                  <p className="text-neutral-600">
+                    Annual student data updates required printing 2,000+ forms, mailing them to parents, collecting responses, and manually re-entering data. This consumed over 1,000 staff hours, introduced frequent errors, and cost ₹2,400 annually in printing alone.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">The Solution</h4>
+                  <p className="text-neutral-600">
+                    Developed a Google Apps Script system with dynamic, token-protected web forms sent via automated email batches. Parents updated data directly into the central Google Sheets database, eliminating all manual re-entry while maintaining security and accountability through access logging.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">The Results</h4>
+                  <ul className="space-y-2 text-neutral-600">
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Saved 1,070+ staff hours annually (99% reduction in process time)
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Eliminated 100% of manual data entry errors
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Reduced process time from 1 week to 4 hours setup + 10 minutes execution
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Saved ₹2,400 in annual printing and mailing costs
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Deployed across all three schools within days of demonstration
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-6 border-t">
+                  <p className="text-sm text-neutral-600 italic">
+                    &quot;The automation system has completely transformed our annual data collection. What used to take our entire staff over a week now happens automatically with zero errors.&quot;
+                  </p>
+                  <p className="text-sm font-semibold mt-2">
+                    - School Administrator
+                  </p>
+                </div>
               </div>
+            </div>
 
-              <div>
-                <h4 className="font-semibold text-lg mb-2">The Solution</h4>
-                <p className="text-neutral-600">
-                  Developed a comprehensive Google Apps Script solution that
-                  automated data entry, validation, and synchronization across
-                  all departments. Implemented custom functions for data
-                  processing and automated email notifications for updates.
-                </p>
+            {/* Featured Case Study 2 */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold mb-6">
+                Featured: Tech Support Ticket Automation
+              </h3>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">The Challenge</h4>
+                  <p className="text-neutral-600">
+                    Three schools with 340 staff faced escalating costs with ₹42,000/year Freshdesk licenses, 30-60 minute form submissions, manual ticket assignments taking 5-10 minutes each, and 1-2 day response times that frustrated users.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">The Solution</h4>
+                  <p className="text-neutral-600">
+                    Built a custom dual-bot Telegram system in just 2 days using Google Apps Script and webhooks. Bot1 guides users through Q&A, assigns ticket numbers, and logs to Google Sheets. Bot2 handles tech staff updates, leave management, and status tracking—all with real-time reporting.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-lg mb-2">The Results</h4>
+                  <ul className="space-y-2 text-neutral-600">
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Eliminated ₹42,000 in annual Freshdesk licensing costs
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Reduced submission time by 95% (from 30-60 mins to 1-2 mins)
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Automated ticket assignment (90% faster than manual process)
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Achieved same-day responses vs. previous 1-2 day delays
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Increased ticket capture by 66-150% due to ease of use
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary-600 mr-2">✓</span>
+                      Teachers reported being "super-happy" with instant chat-based support
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-6 border-t">
+                  <p className="text-sm text-neutral-600 italic">
+                    &quot;Teachers love the instant Telegram interface. We went from constant complaints about slow support to zero escalations in the first month. It&apos;s been transformational.&quot;
+                  </p>
+                  <p className="text-sm font-semibold mt-2">
+                    - IT Department Head
+                  </p>
+                </div>
               </div>
+            </div>
+          </div>
 
+          {/* Summary Stats */}
+          <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-6 text-center">Combined Impact Across Projects</h3>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <h4 className="font-semibold text-lg mb-2">The Results</h4>
-                <ul className="space-y-2 text-neutral-600">
-                  <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
-                    Saved 1,070+ staff hours annually through automation
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
-                    Reduced data entry errors by 99%
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
-                    Eliminated ₹2,400 in monthly operational costs
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
-                    Improved data accessibility and real-time reporting
-                  </li>
-                </ul>
+                <div className="text-3xl font-bold mb-2">1,070+</div>
+                <div className="text-primary-100">Hours Saved Annually</div>
               </div>
-
-              <div className="pt-6 border-t">
-                <p className="text-sm text-neutral-600 italic">
-                  &quot;The automation system has completely transformed our
-                  operations. What used to take days now happens instantly, and
-                  we&apos;ve eliminated virtually all data errors.&quot;
-                </p>
-                <p className="text-sm font-semibold mt-2">
-                  - Department Head, Educational Institution
-                </p>
+              <div>
+                <div className="text-3xl font-bold mb-2">₹44,400</div>
+                <div className="text-primary-100">Annual Cost Savings</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-2">99%</div>
+                <div className="text-primary-100">Error Reduction</div>
               </div>
             </div>
           </div>
